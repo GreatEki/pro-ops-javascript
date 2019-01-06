@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>sting matcher</title>
+  <script type=text/javascript>
+
+
+      function match() {
+
+        var user = document.getElementById("usertxt").value;
+        var pass = document.getElementById("passwordtxt").value;
+
+        if (user == pass) {
+
+          alert("Username and password matches");
+        }
+        else {
+          alert("Username and Password doesn't match!");
+        }
+      }
+
+  </script>
+</head>
+<body>
+  <h1>String Matcher</h1>
+  <br>
+  <hr size=5 noshade>
+  <br>
+  <form>
+
+    <input type=text  id=usertxt placeholder="Enter Username" size=25>
+    <br>
+    <input type=password id=passwordtxt placeholder="Enter Password" size=25>
+    <br>
+    <button id=btnCheck onclick="match()"">Check String</button>
+  </form>
+</body>
+</html>

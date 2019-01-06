@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>sting matcher</title>
+  <script type=text/javascript>
+
+
+      function match() {
+
+        var user = document.getElementById("usertxt").value;
+        var pass = document.getElementById("passwordtxt").value;
+        var email = document.getElementById("emailtxt").value;
+
+       // var regx = /^[5-9][a-z]{8}[0]$/;
+        var regx = /^([a-z 0-9\.-]+)@([a-z 0-9]).([a-z]{2,4})$/;
+
+        if (regx.test(email)) {
+
+          //document.getElementById("lblphone").innerHTML = "Valid";
+          //document.getElementById("lblphone").style.color="green";
+         // document.getElementById("lblphone").style.visibility="visible";
+
+          document.getElementById("lblemail").innerHTML = "valid";
+          document.getElementById("lblemail").style.color = "green";
+          document.getElementById("lblemail").style.visibility = "visible";
+
+          alert("valid Email");
+         
+        } 
+        else {
+           // document.getElementById("lblphone").innerHTML = "Invalid";
+           // document.getElementById("lblphone").style.color="red";
+         // document.getElementById("lblphone").style.visibility="visible";
+
+          document.getElementById("lblemail").innerHTML = "invalid";
+          document.getElementById("lblemail").style.color = "red";
+          document.getElementById("lblemail").style.visibility = "visible";
+
+          alert("invalid Email");
+         
+        }
+      }
+
+  </script>
+</head>
+<body>
+  <h1>Phone Number Validation</h1>
+  <br>
+  <hr size=5 noshade>
+  <br>
+  <form>
+
+    <input type=text  id=usertxt placeholder="Enter Username" size=25>
+    <br>
+    <input type=text id=passwordtxt placeholder="Phone Number" size=25>
+    <br>
+    <label id="lblphone" style=" color: green; visibility: hidden">Valid</label>
+    <br>
+    <input id="emailtxt" type=text placeholder="email address" size=25>
+    <br>
+    <label id="lblemail" style="color: green; visibility: hidden">Valid</label>
+    <br><br>
+    <button id=btnCheck onclick="match()">Check String</button>
+  </form>
+</body>
+</html>

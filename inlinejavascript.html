@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title>InlineJS</title>
+  <body>
+
+    <button onclick="createParagraph()">Click me!</button>
+    function createParagraph() {
+      let para = document.createElement('p');
+      para.textContext = 'You clicked the button!';
+      document.body.appendChild(para);
+    }
+  </body>
+</head>
+</html>
