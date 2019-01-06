@@ -1,0 +1,29 @@
+<html>
+<head>
+  <script language = Javascript>
+
+        function disptime() {
+    var currentTime = new Date();
+    var hour = currentTime.getHours();
+    var min = currentTime.getMinutes();
+    var sec = currentTime.getSeconds();
+
+    var temp = ((hour > 12) ? hour - 12 : hour)
+    temp += ((min < 10) ? ":0" : ":") + min
+    temp += ((sec < 10) ? ":0" : ":") + sec
+    temp += ((hour >= 12) ? "PM" : "AM")
+    document.timeform.timetxt.value = temp
+    id = setTimeout("disptime()", 1000)
+  }
+
+
+
+  </script>
+</head>
+<body onLoad="disptime()">
+  <p>The current time is:</p>
+  <form name="timeform">
+    <input type="text" name="timetxt" size = 20>
+  </form>
+</body>
+</html>

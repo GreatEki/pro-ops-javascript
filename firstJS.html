@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type= "text/javascript">
+<!--
+var A = "12";
+var i = 12;
+var B = 7.5;
+ var c = A + B;
+ var d = i + B;
+
+ var todays_date = new Date();
+ var seconds = todays_date.getSeconds();
+ var b_color = (seconds >= 3 && seconds <= 50) ? "forest green" : "blue";
+ document.write("<body text="white" bgcolor="+ b_color + ">");
+//-->
+
+
+</script>
+</head>
+
+<form>
+  <input type = "button" value = "Greeting" OnClick="greeting()">
+  <br><br>
+  <input type = "button" value="Confirm" onClick="confirm()">
+  <br><br>
+  <input type = "button" value = "Time and Colour" onClick ="TimeAndColor">
+</form>
+</body>
+
+</html>

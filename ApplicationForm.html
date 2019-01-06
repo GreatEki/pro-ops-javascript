@@ -1,0 +1,80 @@
+<html>
+<head>
+<script language = "Javascript">
+
+          function formCheck() {
+        var fname = OnlineForm.Firstname.value;
+        var lname = OnlineForm.Lastname.value;
+
+        if (fname == "" && lname == "") {
+              alert("Important fields are empty");
+        }
+        else  if (fname != "" && lname == "") {
+          alert("Important fields are empty");
+        }
+        else if (fname == "" && lname != "") {
+            alert("Some Important fields have not been entered");
+        }
+        else {
+            alert("Action Successful");
+        }
+      }
+
+</script>
+</head>
+
+<body bgcolor="grey">
+  <h2><center>Online Form</center></h2>
+
+  <hr shade="black" size=5%% width=100%>
+  <br>
+  <form name="OnlineForm">
+  <p><font color="limegreen">Note that fields with the<span color=red>'*'</span> sign are compulsory</font></p>
+
+    <label for=Firstname>Firstname*</label>
+    <input type="text" name="Firstname" size=20>
+    <br><br>
+    <label for=Middlename>Middlename</label>
+    <input type="text" name="Middlename" size=20>
+    <br><br>
+
+    <label for=Lastname>Lastname*</label>
+    <input type="text" name="Lastname" size=20>
+    <br><br>
+    <label for=email>Email*</label>
+    <input type="text" name="emailtxt" size=20>
+    <br>
+    <input type="button" name="emalvalbtn" valve="validate email"
+    onClick="emailVal(OnlineForm, OnlineForm.emailtxt)">
+
+    <br><br>
+    <p><b>IT Occupation*</b></p>
+    <input type=checkbox name="Occupation1" value="0" checked>Web Designer
+    <input type=checkbox name="Occupation2" value="1">Web Developer
+    <input type=checkbox name="Occupation3" value="2">Software Developer(Full Stack)
+
+    <p><b>Qualifications*</b>
+      <select>
+        <option>Bachelor of Science(B.Sc)</option>
+          <option>Postgraduate(PGDE)</option>
+          <option>Masters Degree(M.Sc)</option>
+            <option>Doctoral Degree(P.hd)</option>
+          </select></p>
+
+  <br><br>
+
+  <label for="Experience">Experience*</label>
+  <input type=radio name="Experience1" value="0" checked>0years Experience
+  <input type=radio name="Experience1" value="1">1-3years Experience
+  <input type=radio name="Experience1" value="2">above 3years Experience
+  <p>Comments
+  <textarea name="Comments" cols="30" rows="5"></textarea>
+
+  <br><br>
+
+  <input type ="button" name="btnSubmit" value ="Submit" onClick="formCheck()">
+  <input type = reset value = reset>
+
+  </form>
+</body>
+</html>

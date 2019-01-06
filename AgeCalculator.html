@@ -1,0 +1,36 @@
+<html>
+<head>
+<script language = Javascript>
+
+  function Calc() {
+    var Your_Age = myForm.year.value;
+    var Age_diff = (2018 - Your_Age);
+    var Name = myForm.Username.value;
+
+
+      if (Your_Age == null) {
+        alert("No value entered for Age!!");
+      }
+      else {
+        document.write(Name + " " + "Your Age is:" + " " + Age_diff);
+      }
+  }
+</script>
+</head>
+
+<body>
+  <p>Today's Date is 2/10/2018</p>
+  <form name="myForm" onChange="losefocus()">
+    <label for=Username>Enter Username</label>
+    <input type=text name="Username" size=10>
+    <br><br>
+    <label for = entry>Enter your date of birth(dd-mm-yy)</label>
+    <input type="text" name="day" size=5>/
+    <input type="text" name="month" size=5>/
+    <input type="text" name="year" size=5>
+    <br>
+    <input type="button" name="btnCalculate" value=Calculate onClick="Calc()">
+
+  </form>
+</body>
+</html>
