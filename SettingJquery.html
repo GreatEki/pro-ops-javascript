@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Setting Up Jquery</title>
+    </head>
+    <body>
+        <br><br>
+
+        <h1 id="head">Setting up Jquery</h1>
+        <br>
+        <button id="btn1">Click Me</button>
+    </body>
+    <script src="C:\Users\Dell\Documents\Andela lectures\JqueryTest\js\jquery-3.3.1.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+            $("button").click(fn1);
+            
+            function fn1() 
+            {
+                $("#head").fadeToggle(5000);
+            }
+        });
+           
+    </script>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Automatic Image Slider</title>
+</head>
+<body>
+    
+        <div>
+            <img id="img1" name="slide" width="400" height="200">
+        </div>
+</body>
+
+    <script>
+            var i = 0; //start index
+            var images = [];
+            var time = 3000;
+            
+            images[0] = "C:\Users\Dell\Documents\JavaScript\image\advert.png";
+            images[1] = "C:\Users\Dell\Documents\JavaScript\image\dean-pugh.jpg";
+            images[2] = "C:\Users\Dell\Documents\JavaScript\image\ekene.JPG";
+
+
+            function changeImg() {
+
+               // document.slide.src = images[i];
+
+              var img1 = document.getElementById("img1");
+              img.src = images[i];
+
+                if (i < images.length - 1) {
+                    i++;
+                }
+                else {
+                    i = 0;
+                }
+
+                setTimeout("changeImg()", time);
+            }
+
+           window.onload= changeImg;
+
+    </script>
+</html>

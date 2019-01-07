@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover_Events and Hide/Show</title>
+
+    <style>
+        .container {
+            width: 1000px;
+           position: absolute;
+           left: 15%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Hover event in Jquery</h2>
+    <br><br>
+<div class="container">
+        <div class="img-animation">
+            <img id="img1" src="C:\Users\Dell\Documents\HtmlTest\ekene_portfolio\images\ekene.JPG" width="150"/>
+            <br>
+        </div>
+    
+    <br><br>
+    <h2>This demonstrates the Hide and Show effects in Jquery</h2> 
+    <br>
+    <p>By clicking on button hide the img should disappear<br>
+        by clicking on button show, the img should reappear</p>
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+    <br><br>
+    <button id="btn-toggle">Toggle</button>
+    <BR>
+    <button id="btn-animate">Animate</button>
+
+</div>
+</body>
+
+    <script src="C:\Users\Dell\Documents\Andela lectures\JqueryTest\js\jquery-3.3.1.js"></script>
+    <script>
+
+        /*
+            NOTE: The fadeIn(), fadeOut(), toggle(); fadeToggle() methods can accept one or two parameters
+            e.g "slow", "fast".
+            Or it can take in two parameters e.g fadeToggle(2000, callback);
+            the 1st parameter is "2000" milliseconds
+            The 2nd parameter is called the "callback" 
+        */
+            $(document).ready(function() {
+
+                //$("#img1").mouseenter(fn1);
+                //$("#img1").mouseleave(fn2);
+
+                $("#img1").hover(fn1, fn2);
+
+                function fn1() {
+                    $("#img1").fadeOut(2000);
+                }
+
+                function fn2() {
+                    $("#img1").fadeIn(2000);
+                }
+
+
+                //Hide and Show Effects in Jquery
+                $("#btn1").click(function() {
+                    $("#img1").hide();
+                });
+
+                $("#btn2").click(function() {
+                    $("#img1").show();
+                });
+
+                /*
+                    This performs both the operations of hide()  and show() methods in Jquery, 
+                    depending on which condition is true.
+                    i.e if the html element is shown when toggle() is called the element 
+                    would be hidden. But if it is hidden, when toggle() is called it will be 
+                    shown.
+                */
+                $("#btn-toggle").click(function() {
+                    $("#img1").toggle("slow");
+                });
+
+                $("#btn-animate").click(function() {
+                    $(".img-animation").animate({
+                        position: 'absolute',
+                        left:'50%',
+                        opacity: '0.3',
+                        width: '300',
+                        height: '300'
+                    })
+                });
+
+            });
+    </script>
+</html>
